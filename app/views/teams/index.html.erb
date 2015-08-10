@@ -1,0 +1,11 @@
+<% provide(:title, 'Teams') %>
+<h1>Teams</h1>
+
+<ul class="teams">
+  <% @teams.each do |team| %>
+    <li>
+      <%= link_to team.name, team %> | 
+      <%= link_to "delete", team, method: :delete, data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>

@@ -1,12 +1,12 @@
 
 <% provide(:title, 'Home') %>
 <div class="center hero-unit">
-	<h1>Spirit Board</h1>
+	<h2>Welcome to Spirit Board app!</h2>
 	<p>
-	  Spirit Board helps you track spirit scores for your ultimate frisbee tournament!
-	  <a href="https://en.wikipedia.org/wiki/Ultimate_(sport)">What is Ultimate?</a>
+	  Spirit Board app helps you track spirit scores for your ultimate frisbee tournament!
 	</p>
+	<%= link_to "Teams", teams_path, class: "btn btn-large btn-primary" %>
+	<%= link_to "Scores", '#', class: "btn btn-large btn-primary" %>
 </div>
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 
 
