@@ -1,4 +1,6 @@
 SpiritBoardApp::Application.routes.draw do
+  get "teams/new"
+
   root to: 'static_pages#home'
 
   match '/about',   to: 'static_pages#about'
