@@ -16,4 +16,6 @@ class Team < ActiveRecord::Base
   attr_accessible :captian, :city, :country, :name, :spiritcaptian
 
   validates :name, presence: true
+  validates :captian, presence: true
+  validates :spiritcaptian, presence: true
 end
