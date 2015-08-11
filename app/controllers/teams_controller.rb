@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+
   def show
   	@team = Team.find(params[:id])
   end	
@@ -29,7 +30,6 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
     if @team.update_attributes(params[:team])
       flash[:success] = "Team updated"
-      sign_in @team
       redirect_to @team
     else
       render 'edit'

@@ -21,7 +21,9 @@
       <%= f.label :country %>
       <%= f.text_field :country %>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+      <%-# commented line -%>
+      <%-# <%= f.submit "Cancel", :back => 'cancel', class: "btn btn-large btn-primary" %>
+      <%= f.submit "Save", class: "btn btn-large btn-primary" %>
     <% end %>
 
   </div>
