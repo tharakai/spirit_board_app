@@ -14,6 +14,7 @@
 
 class Team < ActiveRecord::Base
   attr_accessible :captian, :city, :country, :name, :spiritcaptian
+  has_many :scores, dependent: :destroy
 
   validates :name, presence: true
   validates :captian, presence: true

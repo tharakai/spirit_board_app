@@ -1,6 +1,6 @@
 <% provide(:title, @team.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span3">
     <section>
   		<h1> <%= @team.name %> </h1>
   		City : <%= @team.city %> <br>
@@ -11,6 +11,17 @@
       <%= link_to "Remove", @team, method: :delete, data: { confirm: "You sure?" } %>
     </section>
   </aside>
+  <aside class="span9">
+  <section>
+      <% if @team.scores.any? %>
+        <h1>Spirit Scores - <%= @team.scores.count %></h1>
+        <table class = "table table-hover table-bordered table-condensed table-responsive">
+          <tr class ="info"><td>Game</td><td>Scored By</td><td>Rules knowledge</td><td>Fouls & body contact</td><td>Fair mindness</td><td>Positive attitude</td><td>Communication</td></tr><br>
+          <%= render @scores %>
+        </table>
+      <% end %>
+  </section>
+</aside>
 </div>
 
 
