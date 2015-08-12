@@ -3,7 +3,7 @@
           <%= score.game %> 
         </td>
     	  <td> 
-          <%= score.by_team_id %> 
+          <%= score.scorer.name%> 
         </td>
     	  <td> 
           <%= score.rules %> 
@@ -19,6 +19,9 @@
         </td>
         <td> 
           <%= score.communication %>  
+        </td>
+        <td> 
+          <%= score.rules + score.fouls  + score.fair_mind + score.positivity + score.communication %>  
         </td>
     </tr>
 

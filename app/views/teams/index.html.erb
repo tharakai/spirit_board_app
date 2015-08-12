@@ -4,9 +4,9 @@
 <ul class="teams">
   <% @teams.each do |team| %>
     <li>
-      <%= link_to team.name, team %>
+      <h4><%= link_to team.name, team %></h4>
     </li>
   <% end %>
   <br>
-  <%= link_to "Add Team", new_team_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Add Team", new_team_path, class: "btn btn-default btn-success" %>
 </ul>

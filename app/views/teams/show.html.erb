@@ -16,10 +16,16 @@
       <% if @team.scores.any? %>
         <h1>Spirit Scores - <%= @team.scores.count %></h1>
         <table class = "table table-hover table-bordered table-condensed table-responsive">
-          <tr class ="info"><td>Game</td><td>Scored By</td><td>Rules knowledge</td><td>Fouls & body contact</td><td>Fair mindness</td><td>Positive attitude</td><td>Communication</td></tr><br>
+          <tr class ="info"><td>Game</td><td>Scored By</td><td>Rules knowledge</td><td>Fouls & body contact</td><td>Fair mindness</td><td>Positive attitude & self control</td><td>Communication</td><td><b>Total</b></td></tr><br>
           <%= render @scores %>
         </table>
       <% end %>
+      <button type="button" class="btn btn-default btn-success" data-toggle="modal" data-target="#myModal">
+        Add Score
+      </button>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <%= render '/scores/score_form' %>
+      </div>
   </section>
 </aside>
 </div>
